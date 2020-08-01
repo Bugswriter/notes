@@ -2,15 +2,14 @@
 #+DESCRIPTION: My notes on git (version control system)
 #+AUTHOR: Suraj(@bugswriter)
 
-* Introduction
+** Introduction
 Git is a distributed version control system for tracking changes in source code during software 
-development. Bascially for collaborating with other programmers and keeping track of changes in
-project's source code.
+development. 
 
-* Git Command line basics
 ** More about git
 Git is a distributed VCS (Version control system). It means every developer have the copy of source
-code in his own local machine.
+code in his own local machine. Simply it's for collaborating with other programmers and keeping 
+track of changes in project's source code.
 
 ** Getting Started
 Setting up git is very easy just install git package in your linux, mine is Arch Linux so for Arch 
@@ -37,5 +36,24 @@ You can check your config variables too (note: Ignore all extra variables just l
 git config --list
 #+END_SRC
 
+If you ever need help on any of git command like action (git /<anything here is action>/). Like right now we did config action. We can do
+=git help <verb>= or =git <verb> --help=. For example config action:
+#+BEGIN_SRC bash
+git help config
+git config --help
+#+END_SRC
 
+** Two common Scenerios
+*** Existing Project
+Here you have a project already and you want to start tracking that project by using git.
+For this case you have to initialize your project directory with git.
+#+BEGIN_SRC bash
+git init
+#+END_SRC
 
+This command will initialize your project with git and if you do =ls -a= You will find a new 
+.git directory which contain all git data which track the data and make all magic possible.
+*Note*: If at any point we want to revert things back and remove all git magic. Just do =rm -rf .git=.
+*** Remote Project
+Here you have an existing project remotely, somewhere on a remote server (github/gitlab) and
+you want to work on it.
