@@ -1,0 +1,41 @@
+#+TITLE: Git Notes
+#+DESCRIPTION: My notes on git (version control system)
+#+AUTHOR: Suraj(@bugswriter)
+
+* Introduction
+Git is a distributed version control system for tracking changes in source code during software 
+development. Bascially for collaborating with other programmers and keeping track of changes in
+project's source code.
+
+* Git Command line basics
+** More about git
+Git is a distributed VCS (Version control system). It means every developer have the copy of source
+code in his own local machine.
+
+** Getting Started
+Setting up git is very easy just install git package in your linux, mine is Arch Linux so for Arch 
+I will use pacman.
+#+BEGIN_SRC bash
+pacman -S git
+#+END_SRC
+
+After this I can check my git version to make sure my git is installed correctly.
+#+BEGIN_SRC bash
+git --version
+#+END_SRC
+
+** Setting up some config values
+Now after git installation we have to set some global config variables. We need these variables will tell
+git installed in your local system about the user who is doing changes and commits.
+#+BEGIN_SRC bash
+git config --global user.name "Your Name"
+git config --global user.email "youremail@domain.com"
+#+END_SRC
+
+You can check your config variables too (note: Ignore all extra variables just look name and email)
+#+BEGIN_SRC bash
+git config --list
+#+END_SRC
+
+
+
